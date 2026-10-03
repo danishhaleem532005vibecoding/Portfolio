@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Showcase | Ahmad Danish</title>
+    <meta name="description" content="Portfolio of selected web development, Shopify, SEO, software, and graphic design projects by Ahmad Danish.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <style>
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+        .filter-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-sub);
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-blue);
+            color: #FFF;
+            border-color: var(--accent-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <nav id="navbar" class="navbar"></nav>
+    
+    <main id="main-content">
+        <section class="container py-20">
+            <div class="text-center mb-10 fade-in">
+                <span style="color: var(--accent-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Portfolio Showcase</span>
+                <h1 style="font-size: 3rem; margin-top: 0.5rem;">Selected Projects</h1>
+                <p style="max-width: 600px; margin: 0.75rem auto 0;">Demonstration of technical, design, and business capabilities built across web and software.</p>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="All">All</button>
+                    <button class="filter-btn" data-filter="Websites">Websites</button>
+                    <button class="filter-btn" data-filter="Shopify">Shopify</button>
+                    <button class="filter-btn" data-filter="Software">Software</button>
+                </div>
+            </div>
+
+            <div class="projects-layout" id="projects-list">
+                <!-- Injected dynamically by JS -->
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="container py-20 fade-in">
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 3.5rem 2rem; text-align: center;">
+                <h2>Have a custom project in mind?</h2>
+                <a href="contact.html" class="btn-primary mt-10">Start a Project With Ahmad</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const projectImagesMap = {
+            'zlaser': 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+            'hungerhub': 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+            'institute': 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80',
+            'hotel': 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80',
+            'gizmocart': 'https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=800&q=80',
+            'lumiere': 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80',
+            'usman': 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80',
+            'techmart': 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80',
+            'treehouse': 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80',
+            'pharmacy': 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80',
+            'skillbridge': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80'
+        };
+
+        const renderProjectsList = (filter = 'All') => {
+            const list = document.getElementById('projects-list');
+            if (!list) return;
+
+            const filtered = filter === 'All' 
+                ? PORTFOLIO_DATA.projects 
+                : PORTFOLIO_DATA.projects.filter(p => p.category === filter);
+
+            list.innerHTML = filtered.map((p, idx) => `
+                <div class="project-row fade-in">
+                    <div class="project-image-box">
+                        <img src="${projectImagesMap[p.id] || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'}" alt="${p.title}">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">${p.category} • ${p.status}</span>
+                        <h3>${p.title}</h3>
+                        <p>${p.description}</p>
+                        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                            <span style="background:rgba(255,255,255,0.05); border:1px solid var(--border-color); padding:0.35rem 0.85rem; border-radius:6px; font-size:0.85rem;">Status: ${p.status}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Observe newly added elements
+            const reveals = list.querySelectorAll('.fade-in');
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => obs.observe(el));
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProjectsList('All');
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    renderProjectsList(e.target.getAttribute('data-filter'));
+                });
+            });
+        });
+    </script>
+</body>
+</html>

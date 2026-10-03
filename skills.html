@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Competencies | Ahmad Danish</title>
+    <meta name="description" content="Technical, marketing, creative, and educational skills of Ahmad Danish.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <style>
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .skill-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 2rem;
+        }
+        .skill-box h3 {
+            color: var(--accent-blue);
+            font-size: 1.3rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .tag-badge {
+            font-size: 0.72rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .badge-exp { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .badge-core { background: rgba(99, 102, 241, 0.2); color: var(--accent-indigo); }
+        .badge-learn { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <nav id="navbar" class="navbar"></nav>
+    
+    <main id="main-content">
+        <section class="container py-20">
+            <div class="text-center mb-10 fade-in">
+                <span style="color: var(--accent-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Capabilities</span>
+                <h1 style="font-size: 3rem; margin-top: 0.5rem;">Skills & Toolset</h1>
+                <p style="max-width: 600px; margin: 0.75rem auto 0;">Transparent breakdown of technical, digital, creative, and educational competencies.</p>
+            </div>
+
+            <div class="skills-grid fade-in">
+                <!-- Experienced Skills -->
+                <div class="skill-box slide-left">
+                    <h3>⚡ Core Disciplines</h3>
+                    <div class="tags-list">
+                        <span class="skill-tag">Digital Marketing <span class="tag-badge badge-exp">Experienced</span></span>
+                        <span class="skill-tag">SEO & Local SEO <span class="tag-badge badge-exp">Experienced</span></span>
+                        <span class="skill-tag">Web Development <span class="tag-badge badge-exp">Experienced</span></span>
+                        <span class="skill-tag">Shopify E-Commerce <span class="tag-badge badge-exp">Experienced</span></span>
+                        <span class="skill-tag">Graphic Design <span class="tag-badge badge-exp">Experienced</span></span>
+                        <span class="skill-tag">AI-Assisted Dev <span class="tag-badge badge-core">Core Skill</span></span>
+                        <span class="skill-tag">Lead Generation <span class="tag-badge badge-core">Core Skill</span></span>
+                        <span class="skill-tag">BS Mathematics <span class="tag-badge badge-core">Core Skill</span></span>
+                        <span class="skill-tag">Quran Education <span class="tag-badge badge-core">Core Skill</span></span>
+                    </div>
+                </div>
+
+                <!-- Tools & Software -->
+                <div class="skill-box slide-right">
+                    <h3>🛠️ Technologies & Software</h3>
+                    <div class="tags-list">
+                        <span class="skill-tag">HTML5 & CSS3</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">Python & PySide6</span>
+                        <span class="skill-tag">Shopify Admin & Liquid</span>
+                        <span class="skill-tag">Google Business Profile</span>
+                        <span class="skill-tag">Canva AI & Graphic Tools</span>
+                        <span class="skill-tag">ChatGPT & Claude AI</span>
+                        <span class="skill-tag">DeepSeek & Antigravity</span>
+                        <span class="skill-tag">GitHub & Replit</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Always Learning Section -->
+            <div class="mt-20 fade-in text-center">
+                <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-glow); padding: 3rem 2rem; border-radius: 20px;">
+                    <span style="color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Continuous Professional Growth</span>
+                    <h2 style="font-size: 2.2rem; margin-top: 0.5rem;">"Always Learning. Always Building."</h2>
+                    <p style="margin: 1rem auto 2rem; max-width: 600px;">Currently expanding expertise in cutting-edge tech and growth strategies:</p>
+                    
+                    <div class="tags-list" style="justify-content: center;">
+                        <span class="skill-tag">AI Development <span class="tag-badge badge-learn">Currently Learning</span></span>
+                        <span class="skill-tag">Advanced SEO <span class="tag-badge badge-learn">Currently Learning</span></span>
+                        <span class="skill-tag">SaaS Development <span class="tag-badge badge-learn">Currently Learning</span></span>
+                        <span class="skill-tag">Automation <span class="tag-badge badge-learn">Currently Learning</span></span>
+                        <span class="skill-tag">Modern Web Tech <span class="tag-badge badge-learn">Currently Learning</span></span>
+                        <span class="skill-tag">E-commerce Growth <span class="tag-badge badge-learn">Currently Learning</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="container py-20 fade-in text-center">
+            <h2>Ready to collaborate?</h2>
+            <a href="contact.html" class="btn-primary mt-10">Work With Ahmad</a>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

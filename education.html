@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education & Tutoring Services | Ahmad Danish</title>
+    <meta name="description" content="Online Quran Tutoring, Mathematics Tutoring, and Academic Support by Ahmad Danish.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <style>
+        .edu-hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+            border: 1px solid var(--border-glow);
+            padding: 4rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: var(--shadow-premium);
+        }
+        .edu-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            margin-top: 4rem;
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .edu-grid-2 { grid-template-columns: 1fr; }
+        }
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        .step-number {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+            color: #FFF;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <nav id="navbar" class="navbar"></nav>
+    
+    <main id="main-content">
+        <section class="container py-20">
+            <!-- Hero -->
+            <div class="edu-hero fade-in">
+                <span style="color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Online Learning Opportunities</span>
+                <h1 style="font-size: 3rem; margin-top: 0.5rem;">Learn Quran & Mathematics Online</h1>
+                <p style="max-width: 650px; margin: 1rem auto 0; font-size: 1.1rem;">Dedicated one-to-one online classes for children and adults focused on clear concepts, practical understanding, and Tajweed perfection.</p>
+                <div class="hero-buttons mt-10" style="justify-content: center;">
+                    <a href="contact.html?service=quran" class="btn-primary">Request a Trial Class</a>
+                </div>
+            </div>
+
+            <!-- Quran Tutoring Section -->
+            <div class="edu-grid-2">
+                <div class="slide-left">
+                    <span style="color: var(--accent-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Quran Education</span>
+                    <h2 style="font-size: 2.2rem; margin-top: 0.5rem;">Online Quran Tutoring</h2>
+                    <p style="margin-top: 1rem; color: var(--text-muted);">
+                        Structured online Quran learning for beginners and advanced learners using interactive Zoom-based sessions.
+                    </p>
+                    
+                    <div style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                        <div style="background:var(--bg-card); padding:0.75rem 1rem; border-radius:10px; border:1px solid var(--border-color); color:#FFF; font-weight:600;">• Noorani Qaida</div>
+                        <div style="background:var(--bg-card); padding:0.75rem 1rem; border-radius:10px; border:1px solid var(--border-color); color:#FFF; font-weight:600;">• Nazara Quran</div>
+                        <div style="background:var(--bg-card); padding:0.75rem 1rem; border-radius:10px; border:1px solid var(--border-color); color:#FFF; font-weight:600;">• Quran Reading</div>
+                        <div style="background:var(--bg-card); padding:0.75rem 1rem; border-radius:10px; border:1px solid var(--border-color); color:#FFF; font-weight:600;">• Tajweed & Makharij</div>
+                        <div style="background:var(--bg-card); padding:0.75rem 1rem; border-radius:10px; border:1px solid var(--border-color); color:#FFF; font-weight:600;">• Hifz (Memorization)</div>
+                        <div style="background:var(--bg-card); padding:0.75rem 1rem; border-radius:10px; border:1px solid var(--border-color); color:#FFF; font-weight:600;">• Islamic Basics</div>
+                    </div>
+                </div>
+
+                <div class="slide-right">
+                    <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 20px;">
+                        <h3 style="color: var(--accent-blue); margin-bottom: 1rem;">Quran Education Background</h3>
+                        <p style="margin-bottom: 0.75rem; color: var(--text-sub);"><strong>Basic Nazara and Hifz:</strong> Jamia Iqra Rozat-ul-Quran</p>
+                        <p style="margin-bottom: 0.75rem; color: var(--text-sub);"><strong>Tajweed-ul-Quran:</strong> Madrasa Tamheed-ul-Quran</p>
+                        <p style="margin-bottom: 0.75rem; color: var(--text-sub);"><strong>Tajweed Instructor:</strong> Qari Saeed Ahmad Al-Mardaanvi</p>
+                        <p style="margin-bottom: 0.75rem; color: var(--text-sub);"><strong>Certifications/Courses:</strong> Qaida Tajweed, Tajweed Course / Hadr</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mathematics Tutoring Section -->
+            <div class="edu-grid-2 mt-20">
+                <div class="slide-left" style="order: 2;">
+                    <span style="color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Academic Excellence</span>
+                    <h2 style="font-size: 2.2rem; margin-top: 0.5rem;">Learn Mathematics With Clear Concepts</h2>
+                    <p style="margin-top: 1rem; color: var(--text-muted);">
+                        As a BS Mathematics student (7th Semester) and experienced math teacher (Al-Meezan School internship), Ahmad provides patient, step-by-step explanations designed to make mathematical concepts easy to understand.
+                    </p>
+                    
+                    <div style="margin-top: 1.5rem; font-size: 1.5rem; letter-spacing: 15px; color: var(--accent-blue);">
+                        π Σ √ x² ∫ ∇
+                    </div>
+                </div>
+
+                <div class="slide-right" style="order: 1;">
+                    <div style="border-radius: 20px; overflow: hidden; border: 1px solid var(--border-color);">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80" alt="Mathematics Tutoring" style="width: 100%; height: 100%; display: block;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teaching Approach -->
+            <div class="mt-20 fade-in text-center">
+                <span style="color: var(--accent-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Methodology</span>
+                <h2 style="font-size: 2.2rem; margin-top: 0.5rem;">Teaching Approach</h2>
+
+                <div class="cards-grid mt-10">
+                    <div class="service-card">
+                        <h4>PATIENT</h4>
+                        <p>Explain concepts step by step without unnecessary complexity.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>CONCEPT-FOCUSED</h4>
+                        <p>Focus on understanding rather than simply memorizing answers.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>INTERACTIVE</h4>
+                        <p>Encourage students to ask questions and actively participate.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>PRACTICAL</h4>
+                        <p>Use real-world examples and practice problems to strengthen understanding.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How Online Classes Work -->
+            <div class="mt-20 fade-in">
+                <div class="text-center">
+                    <span style="color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Simple Process</span>
+                    <h2 style="font-size: 2.2rem; margin-top: 0.5rem;">How Online Classes Work</h2>
+                </div>
+
+                <div class="cards-grid mt-10">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h4>Choose Your Subject</h4>
+                        <p>Select Quran Tutoring, Mathematics, or Academic Science support.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h4>Schedule Your Session</h4>
+                        <p>Coordinate a flexible weekly time slot that fits your schedule.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h4>Join Online Class</h4>
+                        <p>Connect easily via Zoom for interactive live lessons.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <h4>Learn & Practice</h4>
+                        <p>Master concepts with guided practice and step-by-step feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="container py-20 fade-in text-center">
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 3.5rem 2rem;">
+                <h2>Ready to Start Learning?</h2>
+                <div class="hero-buttons mt-10" style="justify-content: center;">
+                    <a href="contact.html?service=quran" class="btn-primary">Quran Classes</a>
+                    <a href="contact.html?service=math" class="btn-secondary">Academic Tutoring</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
